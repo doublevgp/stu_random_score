@@ -68,11 +68,13 @@ int main(int argc, char *argv[])
 					if(1 == stu_select_5_score_input(p_stu_header, n_stu_num))
 					{
 						printf("final_score return code:%d\n", stu_score_write_file(&p_stu_header, n_stu_num, "final_score.txt"));
+						free(p_stu_header);
 						exit(0);
 					}
 					break;
 				case 2:
 					printf("save file return code:%d\n", stu_write_file(p_stu_header, n_stu_num, "save.txt"));
+					free(p_stu_header);
 					exit(0);
 					break;
 				default:
@@ -82,6 +84,6 @@ int main(int argc, char *argv[])
 
 
 
-	free(p_stu_header);
+
 	return 0;
 }
