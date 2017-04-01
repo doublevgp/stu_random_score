@@ -67,13 +67,13 @@ int main(int argc, char *argv[])
 				case 1:
 					if(1 == stu_select_5_score_input(p_stu_header, n_stu_num))
 					{
-						printf("final_score return code:%d\n", stu_score_write_file(&p_stu_header, n_stu_num, "final_score.txt"));
+						printf("final_score return code:%d\n", stu_score_write_file(&p_stu_header, n_stu_num, "final_score.txt"));//the filename can be defined the param 
 						free(p_stu_header);
 						exit(0);
 					}
 					break;
 				case 2:
-					printf("save file return code:%d\n", stu_write_file(p_stu_header, n_stu_num, "save.txt"));
+					printf("save file return code:%d\n", stu_write_file(p_stu_header, n_stu_num, "save.txt"));//the finename too
 					free(p_stu_header);
 					exit(0);
 					break;
